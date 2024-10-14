@@ -1,6 +1,7 @@
 
 import express from 'express'; 
 import handlebars from 'express-handlebars'; 
+import router from './routes.js'; 
 
 const app = express(); 
 const port = 5000; 
@@ -16,11 +17,9 @@ app.set('views', 'src/views');
 app.use(express.static('public')); 
 
 // Routes 
-app.get("/", (req, res) => {
-    res.render('home');  
-}); 
+app.use(router); 
 
-// Server listening 
+// Server 
 app.listen(port, () => {
     console.log("App listening on port " + port);  
 }); 
