@@ -7,17 +7,17 @@ const getDb = async function() {
     const json = JSON.parse(data); 
 
     return json; 
-} 
+}; 
 
 const saveDb = async function(movie) {
     const json = await getDb(); 
     json.push(movie); 
     await fs.writeFile(dbPath, JSON.stringify(json, null, 2)); 
-} 
+}; 
 
 const getById = async function(id) { 
     const movies = await getDb(); 
-    const movie = movies.find((m) => m.id === parseInt(id)); 
+    const movie = movies.find((m) => m.id === id); 
 
     return movie; 
 }; 
@@ -26,4 +26,8 @@ const getAll = async function() {
     return await getDb(); 
 }; 
 
-export { getById, getAll }; 
+const create = async function(movie) { 
+    await saveDb(movie); 
+}; 
+
+export default { getById, getAll, create }; 

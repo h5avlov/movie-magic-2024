@@ -16,6 +16,8 @@ app.set('views', 'src/views');
 // Static Route 
 app.use(express.static('public')); 
 
+app.use(express.urlencoded({extended: false})); 
+
 // Routes 
 app.use(router); 
 
