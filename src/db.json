@@ -1,10 +1,12 @@
 [
   {
     "id": "1hvi9c5fgb3754ti6",
-    "title": "Jungle Cuise",
+    "title": "Jungle Cruise",
     "image": "/img/jungle-cruise.jpeg",
-    "genre": "Adventure",
-    "description": "Dreaming about saving countless lives and having another adventure, the feisty English feminist and doctor of botany, Dr Lily Houghton, embarks on a peril-laden mission to change the world. Along with her fashionable brother, MacGregor, Dr Houghton enlists the help of the arrogant, wisecracking riverboat skipper, Captain Frank Wolff, to guide them through the serpentine Amazon River in La Quila, his swift wooden boat. Now, as the intrepid trio ventures deeper and deeper into the heart of an impenetrable green maze, searching for something that cannot be found, a centuries-old curse and the ruthless aristocrat, Prince Joachim, threaten to put an end to their ambitious plans."
+    "genre": "Comedy ",
+    "description": "Dreaming about saving countless lives and having another adventure, the feisty English feminist and doctor of botany, Dr Lily Houghton, embarks on a peril-laden mission to change the world. Along with her fashionable brother, MacGregor, Dr Houghton enlists the help of the arrogant, wisecracking riverboat skipper, Captain Frank Wolff, to guide them through the serpentine Amazon River in La Quila, his swift wooden boat. Now, as the intrepid trio ventures deeper and deeper into the heart of an impenetrable green maze, searching for something that cannot be found, a centuries-old curse and the ruthless aristocrat, Prince Joachim, threaten to put an end to their ambitious plans.",
+    "director": "",
+    "year": ""
   },
   {
     "id": "4rzi9c5sgm3754ti6",
@@ -22,8 +24,8 @@
   },
   {
     "title": "The Matrix",
-    "genre": "Cyberpunk",
-    "director": " Lilly Wachowski",
+    "genre": "Cyberpunk, Sci-Fi ",
+    "director": "Lana Wachowski, Andy Wachowski",
     "year": "1999",
     "image": "https://m.media-amazon.com/images/M/MV5BN2NmN2VhMTQtMDNiOS00NDlhLTliMjgtODE2ZTY0ODQyNDRhXkEyXkFqcGc@._V1_.jpg",
     "rating": "10/10",
@@ -32,12 +34,22 @@
   },
   {
     "title": "Fight Club",
-    "genre": "Drama",
+    "genre": "Drama, Psychological Drama",
     "director": " David Fincher",
     "year": "1999",
     "image": "https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_.jpg",
     "rating": "9/10",
     "description": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.An insomniac office worker and a ...",
     "id": "1hvi9c13km378kgc9"
+  },
+  {
+    "title": "Dune: Part One",
+    "genre": "Sci-Fi, Action, Adventure ",
+    "director": " Denis Villeneuve",
+    "year": "2021",
+    "image": "https://storage.googleapis.com/pod_public/1300/216439.jpg",
+    "rating": "8/10",
+    "description": "A mythic and emotionally charged hero's journey, \"Dune\" tells the story of Paul Atreides, a brilliant and gifted young man born into a great destiny beyond ...",
+    "id": "1hvi9c1h4m37ee401"
   }
 ]

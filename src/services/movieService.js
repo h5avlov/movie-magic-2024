@@ -16,4 +16,8 @@ const create = async function(movie) {
     await movieData.create(movie); 
 }; 
 
-export default { getAll, getById, create }; 
+const update = function(id, movie) {
+    movieData.update(id, movie); 
+}; 
+
+export default { getAll, getById, create, update }; 

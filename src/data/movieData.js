@@ -1,4 +1,5 @@
 import fs from "fs/promises"; 
+import uniqid from "uniqid"; 
 
 const dbPath = './src/db.json'; 
 
@@ -15,6 +16,10 @@ const saveDb = async function(movie) {
     await fs.writeFile(dbPath, JSON.stringify(json, null, 2)); 
 }; 
 
+const updateDb = async function(movies) {
+    await fs.writeFile(dbPath, JSON.stringify(movies, null, 2)); 
+}; 
+
 const getById = async function(id) { 
     const movies = await getDb(); 
     const movie = movies.find((m) => m.id === id); 
@@ -27,7 +32,31 @@ const getAll = async function() {
 }; 
 
 const create = async function(movie) { 
+    movie.id = uniqid(); 
+
     await saveDb(movie); 
 }; 
 
-export default { getById, getAll, create }; 
+const remove = async function(id) { 
+    let movies = await getDb(); 
+    movies = movies.filter((m) => { 
+        m.id !== id 
+    }); 
+
+    await updateDb(movies); 
+}; 
+
+const update = async function(id, movie) { 
+    const movies = await getDb(); 
+    const entity = movies.find(m => m.id == id); 
+    
+    entity.title = movie.title; 
+    entity.genre = movie.genre; 
+    entity.director = movie.director; 
+    entity.year = movie.year; 
+    entity.description = movie.description; 
+
+    updateDb(movies); 
+}; 
+
+export default { getById, getAll, create, update }; 

@@ -1,6 +1,5 @@
 import { Router } from "express"; 
-import movieService from "../services/movieService.js"; 
-import uniqid from 'uniqid'; 
+import movieService from "../services/movieService.js";  
 
 const router = Router(); 
 
@@ -17,12 +16,26 @@ router.get('/create', (req, res) => {
 
 router.post('/create', async (req, res) => { 
     const movie = req.body; 
-    
-    movie.id = uniqid(); 
 
     await movieService.create(movie); 
 
     res.redirect(`/movies/details/${movie.id}`); 
 });  
+
+router.get('/update/:id', async (req, res) => { 
+    const id = req.params.id; 
+    const movie = await movieService.getById(id); 
+
+    res.render('movie/update', movie); 
+}); 
+
+router.post('/update/:id', async (req, res) => { 
+    const movie = req.body; 
+    const id = req.params.id; 
+
+    await movieService.update(id, movie); 
+
+    res.redirect(`/movies/details/${id}`); 
+}); 
 
 export { router as movieControllerRouter }; 
