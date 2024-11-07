@@ -31,4 +31,4 @@ router.get('/about', (req, res) => {
     res.render('home/about'); 
 }); 
 
-export default router; 
+export { router as homeControllerRouter }; 
