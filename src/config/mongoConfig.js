@@ -1,6 +1,6 @@
 import { connect } from "mongoose"; 
 
-const dbUrl = 'mongodb://localhost:27017/movie_magic_db'; 
+const dbUrl = 'mongodb://localhost:27017/movie_magic'; 
 
 const mongoConfig = async function() {
     try {
