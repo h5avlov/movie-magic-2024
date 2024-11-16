@@ -11,6 +11,7 @@ const getAll = function() {
 }; 
 
 const create = function(movie) { 
-    Movie.create(movie); 
+    return Movie.create(movie); 
 }; 
 
+export default { getById, getAll, create }; 

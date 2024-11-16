@@ -17,9 +17,9 @@ router.get('/create', (req, res) => {
 router.post('/create', async (req, res) => { 
     const movie = req.body; 
 
-    await movieService.create(movie); 
+    const m = await movieService.create(movie); 
 
-    res.redirect(`/movies/details/${movie.id}`); 
+    res.redirect(`/movies/details/${m._id}`); 
 });  
 
 export { router as movieControllerRouter }; 

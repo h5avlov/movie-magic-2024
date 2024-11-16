@@ -12,8 +12,8 @@ const getById = async function(id) {
     return movie; 
 } 
 
-const create = async function(movie) { 
-    await movieData.create(movie); 
+const create = function(movie) { 
+    return movieData.create(movie); 
 }; 
 
 export default { getAll, getById, create }; 
