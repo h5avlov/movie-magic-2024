@@ -7,7 +7,7 @@ const mongoConfig = async function() {
         await connect(dbUrl); 
         console.log('DB connection working'); 
     } catch (error) {
-        console.log('Error connectiong to DB: ' + error.message);  
+        console.log('Error connecting to DB: ' + error.message);  
     } 
 }; 
 
